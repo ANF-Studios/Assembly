@@ -39,5 +39,5 @@ jobs:
         run:
           dir;
           nasm main.asm -f elf;
-          g++ main.obj;
+          g++ main.o;
           echo "Success!";
