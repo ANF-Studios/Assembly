@@ -1,0 +1,31 @@
+name: Build main.asm
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+    
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Setup NASM
+        uses: ilammy/setup-nasm@v1.2.0
+        with:
+          version: 2.15.05
+          platform: windows
+          destination: $HOME/nasm
+      - name: Setup MinGW
+        uses: egor-tensin/setup-mingw@v2
+      - name: Build
+        run:
+          nasm main.asm -f win32
+          g++ main.obj -O
+          echo Success!
