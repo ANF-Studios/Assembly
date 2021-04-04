@@ -26,7 +26,7 @@ jobs:
           cd ./nasm-2.15.05;
           Move-Item -Path ./nasm.exe -Destination C:/Windows;
           Write-Host "NASM 2.15.05 is downloaded and to the PATH!";
-      - name: Test nasm
+      - name: Test NASM
         shell: cmd
         run: nasm --version
       - name: Setup MinGW
