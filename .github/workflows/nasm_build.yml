@@ -15,13 +15,13 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Setup Chocolatey
+      - name: Setup NASM with Chocolatey
         uses: crazy-max/ghaction-chocolatey@v1.4.1
         with:
           args: install nasm
-      - name: Setup NASM
-        run:
-          choco install nasm
+      - name: Test nasm
+        with:
+          run: nasm --version
       - name: Setup MinGW
         uses: egor-tensin/setup-mingw@v2
       - name: Build
