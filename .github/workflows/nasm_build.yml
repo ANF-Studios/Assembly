@@ -18,9 +18,9 @@ jobs:
       - name: Setup NASM
         shell: pwsh
         run:
-          Invoke-WebRequest -Uri "https://www.nasm.us/pub/nasm/releasebuilds/2.15.05/win64/nasm-2.15.05-win64.zip" -Outfile "nasm.zip"
-          Expand-Archive -Path "nasm.zip" -DestinationPath "./"
-          pwd
+          Invoke-WebRequest -Uri "https://www.nasm.us/pub/nasm/releasebuilds/2.15.05/win64/nasm-2.15.05-win64.zip" -Outfile "nasm.zip";
+          Expand-Archive -Path "nasm.zip" -DestinationPath "./";
+          pwd;
       - name: Test nasm
         run: nasm --version
       - name: Setup MinGW
