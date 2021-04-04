@@ -39,5 +39,5 @@ jobs:
         run:
           dir;
           nasm main.asm -f win32;
-          g++ main.obj -m32;
+          g++ main.obj -mwin32;
           echo "Success!";
