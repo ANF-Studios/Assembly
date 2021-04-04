@@ -15,6 +15,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+      - name: Is Windows
+        shell: pwsh
+        run: $IsWindows;
       - name: Setup NASM
         shell: pwsh
         run:
