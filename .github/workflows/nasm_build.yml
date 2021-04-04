@@ -21,7 +21,7 @@ jobs:
           Invoke-WebRequest -Uri "https://www.nasm.us/pub/nasm/releasebuilds/2.15.05/win64/nasm-2.15.05-win64.zip" -Outfile "nasm.zip";
           Expand-Archive -Path nasm.zip -DestinationPath ./;
           cd ./nasm-2.15.05;
-          Move-Item -Path ./nasm.exe -Destination ../;
+          Move-Item -Path ./nasm.exe -Destination C:/Windows;
           pwd;
       - name: Test nasm
         shell: pwsh
