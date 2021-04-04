@@ -16,12 +16,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Setup NASM
-        uses: ilammy/setup-nasm@v1.2.0
-        with:
-          version: 2.15.05
-          platform: windows
-          destination: $HOME/nasm
+      #- name: Setup NASM
+      #  uses: ilammy/setup-nasm@v1.2.0
+      #  with:
+      #    version: 2.15.05
+      #    platform: windows
       - name: Setup MinGW
         uses: egor-tensin/setup-mingw@v2
       - name: Build
