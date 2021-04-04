@@ -31,5 +31,5 @@ jobs:
       - name: Build
         run:
           nasm main.asm -f win32
-          g++ main.obj -O
+          g++ main.obj
           echo Success!
