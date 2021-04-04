@@ -38,6 +38,6 @@ jobs:
         shell: pwsh
         run:
           dir;
-          nasm main.asm -f win64;
+          nasm main.asm -f win32;
           g++ main.obj;
           echo "Success!";
