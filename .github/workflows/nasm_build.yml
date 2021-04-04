@@ -25,7 +25,7 @@ jobs:
           Expand-Archive -Path nasm.zip -DestinationPath ./;
           cd ./nasm-2.15.05;
           Move-Item -Path ./nasm.exe -Destination C:/Windows;
-          Write-Host "NASM 2.15.05 is downloaded and  to the PATH!";
+          Write-Host "NASM 2.15.05 is downloaded and to the PATH!";
       - name: Test nasm
         shell: cmd
         run: nasm --version
