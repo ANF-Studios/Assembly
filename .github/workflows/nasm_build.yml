@@ -17,6 +17,8 @@ jobs:
         uses: actions/checkout@v2
       - name: Setup Chocolatey
         uses: crazy-max/ghaction-chocolatey@v1.4.1
+        with:
+          args: -h
       - name: Setup NASM
         run:
           choco install nasm
