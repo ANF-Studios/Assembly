@@ -38,6 +38,6 @@ jobs:
         shell: pwsh
         run:
           dir;
-          nasm main.asm -f elf;
+          nasm main.asm -f elf64;
           g++ main.o;
           echo "Success!";
