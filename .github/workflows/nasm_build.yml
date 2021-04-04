@@ -19,10 +19,13 @@ jobs:
         shell: pwsh
         run:
           Invoke-WebRequest -Uri "https://www.nasm.us/pub/nasm/releasebuilds/2.15.05/win64/nasm-2.15.05-win64.zip" -Outfile "nasm.zip";
-          Expand-Archive -Path "nasm.zip" -DestinationPath "./";
+          Expand-Archive -Path nasm.zip -DestinationPath ./;
+          cd ./nasm-2.15.05;
+          Move-Item -Path ./nasm.exe -Destination ../;
           pwd;
       - name: Test nasm
-        run: nasm --version
+        shell: pwsh
+        run: cd "D:\a\Assembly\Assembly";nasm --version
       - name: Setup MinGW
         uses: egor-tensin/setup-mingw@v2
       - name: Build
