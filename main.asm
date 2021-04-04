@@ -1,5 +1,5 @@
-global _main
+global main
 
 section .text
-_main:
+main:
     ret
