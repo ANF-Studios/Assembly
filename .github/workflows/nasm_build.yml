@@ -39,7 +39,6 @@ jobs:
       - name: Build
         shell: pwsh
         run:
-          dir;
           nasm main.asm -f win32;
           g++ main.obj -mwin32;
           echo "Success!";
