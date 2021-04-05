@@ -3,16 +3,18 @@ extern _printf
 extern _getch
 
 section .data
-    msg:  db  "Hello World!", 0
-    fmt: db "%i", 10, 0
+    x:  dd 15
+    y:  dd 17
+    fmt:  db "%i", 10, 0 
 
 section .text
 _main:
-    call     print_hw
-    ret
-print_hw:
-    mov     eax, msg
-    push    eax
+    mov     eax, [x]
+    mov     ebx, [y]
+    imul     eax, ebx
+    mov     ecx, eax
+    push    ecx
+    push    fmt
     call    _printf
-    pop     eax
+    add     esp, 8
     ret
