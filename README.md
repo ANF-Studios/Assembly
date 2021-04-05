@@ -1,4 +1,4 @@
-# Assembly
+# Assembly [![Build main.asm](https://github.com/ANF-Studios/Assembly/actions/workflows/nasm_build.yml/badge.svg)](https://github.com/ANF-Studios/Assembly/actions/workflows/nasm_build.yml)
 A backup of my Assembly code that I learn and write along the way.
 
 # Repository structure
