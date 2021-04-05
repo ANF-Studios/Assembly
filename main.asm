@@ -3,8 +3,8 @@ extern _printf
 extern _getch
 
 section .data
-    x:  dd 15
-    y:  dd 17
+    x:  dd 5
+    y:  dd 7
     fmt:  db "%i", 10, 0 
 
 section .text
@@ -16,7 +16,6 @@ _main:
     push     ecx
     push     fmt
     call     _printf
-    ;add     esp, 8
     pop      ecx
     add      esp, 4
     ret
