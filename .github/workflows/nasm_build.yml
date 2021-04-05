@@ -1,4 +1,4 @@
-name: Build main.asm
+name: main.asm
 
 on:
   push:
