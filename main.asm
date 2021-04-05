@@ -9,12 +9,14 @@ section .data
 
 section .text
 _main:
-    mov     eax, [x]
-    mov     ebx, [y]
+    mov      eax, [x]
+    mov      ebx, [y]
     imul     eax, ebx
-    mov     ecx, eax
-    push    ecx
-    push    fmt
-    call    _printf
-    add     esp, 8
+    mov      ecx, eax
+    push     ecx
+    push     fmt
+    call     _printf
+    ;add     esp, 8
+    pop      ecx
+    add      esp, 4
     ret
