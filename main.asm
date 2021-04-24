@@ -2,11 +2,17 @@ global _main
 extern _printf
 
 section .data
-    x:  dd "EBX and ECX are not equal!"
+    m_eq:  dd "EAX and EBX are equal!"
 
 section .text
 _main:
-    mov      ecx, x
+    mov      eax, 5
+    mov      ebx, 10
+    cmp      eax, ebx
+    je       eq
+    ret
+eq:
+    mov      ecx, m_eq
     push     ecx
     call     _printf
     pop      ecx
