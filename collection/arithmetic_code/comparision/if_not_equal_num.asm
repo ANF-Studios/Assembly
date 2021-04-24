@@ -9,7 +9,7 @@ _main:
     mov      eax, 5
     mov      ebx, 10
     cmp      eax, ebx
-    jne       neq
+    jne      neq
     ret
 neq:
     mov      ecx, m_neq
