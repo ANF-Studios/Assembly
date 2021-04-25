@@ -2,14 +2,16 @@ global _main
 extern _printf
 
 section .data
-    m_eq:  dd "EAX and EBX are not equal!"
+    m_eq:  dd "EAX and EBX are equal!"
+    a:     db "Microsoft"
+    b:     db "Microsoft"
 
 section .text
 _main:
-    mov      eax, 5
-    mov      ebx, 10
+    mov      eax, a
+    mov      ebx, b
     cmp      eax, ebx
-    jne       eq
+    je       eq
     ret
 eq:
     mov      ecx, m_eq
