@@ -59,4 +59,9 @@ section .text
         add     esp, 8
         call    _getch
 
+        xor     eax, eax
+        xor     ebx, ebx
+        xor     ecx, ecx
+        xor     edx, edx
+
         ret
